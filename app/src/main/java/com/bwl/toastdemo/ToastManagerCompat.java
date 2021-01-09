@@ -25,7 +25,7 @@ import java.util.LinkedList;
  * Created by baiwenlong on 1/8/21.
  */
 public class ToastManagerCompat {
-    private static volatile ToastAction sToastAction;
+    private static volatile ToastAction sToastAction = new SystemToastAction();
     private static boolean sInitialized = false;
     private static final Handler sUIHandler = new Handler(Looper.getMainLooper());
 
